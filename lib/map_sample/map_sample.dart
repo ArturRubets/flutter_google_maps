@@ -45,6 +45,7 @@ class MapSampleState extends State<MapSample> {
       LatLng(37.43296265331129, -122.08832357078792),
     ],
     width: 5,
+    color: Colors.red,
   );
 
   static const _polygon = Polygon(
@@ -57,6 +58,7 @@ class MapSampleState extends State<MapSample> {
     ],
     strokeWidth: 5,
     fillColor: Colors.transparent,
+    strokeColor: Colors.red,
   );
 
   @override
@@ -70,6 +72,7 @@ class MapSampleState extends State<MapSample> {
         polylines: {_polyline},
         polygons: {_polygon},
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _goToTheLake,
         label: const Text('To the lake!'),
